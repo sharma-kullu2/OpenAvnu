@@ -65,7 +65,7 @@ run_with_log() {
 }
 
 # Run daemons in the background
-#run_with_log "daemons/gptp/gptp $nic"
+run_with_log "daemons/gptp/linux/build/obj/daemon_cl $nic"
 run_with_log "daemons/mrpd/mrpd -mvsd -i $nic"
 run_with_log "daemons/maap/linux/build/maap_daemon -i $nic -d /dev/null"
 run_with_log "daemons/shaper/shaper_daemon -d"

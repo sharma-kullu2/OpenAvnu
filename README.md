@@ -15,6 +15,12 @@ git submodule sync
 git submodule init
 git submodule update
 
+# avnu project
 make PLATFORM_TOOLCHAIN=x86_i210_linux IGB_LAUNCHTIME_ENABLED=1 ATL_LAUNCHTIME_ENABLED=0 all  
 
+# igb_avb driver
 make -C lib/igb_avb all
+
+# gptp
+ARCH=I210 make clean all
+
