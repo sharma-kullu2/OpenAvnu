@@ -23,3 +23,4 @@ kmod/igb/*.mod.*
 kmod/igb/modules.order
 lib/igb/*.a
 
+*.log
