@@ -24,10 +24,12 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <errno.h>
 #include <signal.h>
 
+#include "listener_mrp_client.h"
+
 #include <pcap/pcap.h>
 #include <sndfile.h>
 
-#include "listener_mrp_client.h"
+
 
 #define DEBUG 0
 #define PCAP 1

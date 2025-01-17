@@ -57,6 +57,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <errno.h>
 #include <signal.h>
 
+#include "listener_mrp_client.h"
+
 #include <pcap/pcap.h>
 #include <sndfile.h>
 
@@ -73,7 +75,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <linux/if_vlan.h>
 
 #include "igb.h"
-#include "listener_mrp_client.h"
+
 
 #define DEBUG 0
 #define PCAP 0
