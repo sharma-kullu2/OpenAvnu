@@ -5,6 +5,8 @@
 *CMakeFiles/
 CMakeCache.txt
 
+daemons/shaper/shaper_daemon
+examples/simple_rx/simple_rx
 daemons/maap/linux/maap_daemon
 examples/jackd-listener/jack_listener
 examples/jackd-talker/jackd_talker
