@@ -1,9 +1,9 @@
 [submodule "thirdparty/cpputest"]
 	path = thirdparty/cpputest
-	url = ../../AVnu/cpputest.git
+	url = https://github.com/Avnu/cpputest.git
 [submodule "avdecc-lib"]
 	path = avdecc-lib
-	url = ../../AVnu/avdecc-lib
+	url = https://github.com/Avnu/avdecc-lib.git
 [submodule "lib/igb_avb"]
 	path = lib/igb_avb
 	url = https://github.com/AVnu/igb_avb.git
