@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8) 
+cmake_minimum_required (VERSION 3.20) 
 project (open-avb)
 enable_testing()
 
@@ -13,10 +13,20 @@ else()
         message(STATUS "The compiler ${CMAKE_CXX_COMPILER} has no C++11 support. Please use a different C++ compiler.")
 endif()
 
-add_subdirectory("thirdparty/cpputest")
-add_subdirectory("daemons/common/tests")
-add_subdirectory("daemons/mrpd")
-add_subdirectory("daemons/maap")
+if(WIN32)
+    message(STATUS "Compiling on Windows")
+	message("PCAP DIRECTORY: ")
+	message($ENV{WPCAP_DIR})
+	add_subdirectory("daemons/mrpd")
+	add_subdirectory("daemons/maap")
+	add_subdirectory("daemons/gptp")
+else()
+	add_subdirectory("thirdparty/cpputest")
+	add_subdirectory("daemons/common/tests")
+	add_subdirectory("daemons/mrpd")
+	add_subdirectory("daemons/maap")
+	add_subdirectory("lib/avtp_pipeline")
+endif()
 
 message("
 -------------------------------------------------------

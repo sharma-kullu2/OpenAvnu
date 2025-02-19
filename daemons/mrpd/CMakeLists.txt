@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8) 
+cmake_minimum_required (VERSION 3.20) 
 project (mrpd)
 enable_testing()
 
@@ -23,4 +23,6 @@ elseif(WIN32)
   target_link_libraries(mrpd wpcap Iphlpapi Ws2_32)
 endif()
 
+if(!WIN32)
 add_subdirectory("tests/simple")
+endif()

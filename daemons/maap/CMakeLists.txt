@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 2.8)
+cmake_minimum_required (VERSION 3.20)
 project (maap)
 
 set (ComDir "./common")
@@ -35,5 +35,7 @@ elseif(WIN32)
   target_link_libraries(maap_daemon ws2_32)
 endif()
 
-add_subdirectory("test")
-add_subdirectory("tests")
+if(!WIN32)
+	add_subdirectory("test")
+	add_subdirectory("tests")
+endif()
